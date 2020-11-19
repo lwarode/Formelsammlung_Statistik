@@ -1,2 +1,11 @@
-# Formelsammlung_Statistik
-Formulary in statistics with applications in R (Language: German)
+# Formelsammlung Statistik (Language: German)
+
+Die Formelsammlung enthält grundlegende Formeln der deskriptiven Statistik, sowie grundlegende und weiterführende Konzepte der Inferenzstatistik. Die Inhalte basieren unter anderem auf den Lehrveranstaltungen Statistik I und II des Fachbereichs 08 (Sozialwissenschaften) der Universität Bremen. Die Inhalte sollen deh Studierenden auch als Klausurvorbereitung und "Nachschlagewerk" dienen.
+
+Enthalten sind unter anderem:
+
+- Maße der zentralen Tendenz
+- Verteilungsformen
+- Streuungsmaße
+- …
+
