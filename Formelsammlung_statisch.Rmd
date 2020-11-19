@@ -1,0 +1,140 @@
+---
+title: "Formelsammlung Statistik"
+author: "Lukas Warode"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)
+
+theme_set(theme_classic())
+
+knitr::opts_chunk$set(fig.width = 4, fig.height = 2.5, fig.align = "center")
+
+modus <- function(var) {
+  table(var) %>% 
+    sort(decreasing = TRUE) %>% 
+    names() %>% 
+    .[1] %>% 
+    as.numeric()
+}
+```
+
+# Maße der zentralen Tendenz
+
+## Modus
+
+- Nominales Skalenniveau
+- Häufigster Wert
+
+$$ x_{mod} $$
+
+## Median
+
+- Ordinales Skalenniveau
+- Mittlere Ausprägung bei Anordnung der Variable
+
+Ungerade Anzahl an Fällen (n):
+$$ \tilde{x} = x_{(\frac{n+1}{2})}$$ 
+
+```{r median I}
+set.seed(42)
+
+random_sample <- sample(1:42, 11)
+
+sort(random_sample)
+
+median(random_sample)
+```
+
+Gerade Anzahl an Fällen (n):
+$$ \tilde{x} =\frac{x_{(\frac{n}{2})} + x_{(\frac{n}{2}+1)}}{2}$$
+
+```{r median II}
+random_sample <- random_sample[random_sample != max(random_sample)]
+
+sort(random_sample)
+
+median(random_sample)
+```
+
+## Arithmetisches Mittel
+
+- Metrisches Skalenniveau
+- Summe aller Fälle durch Anzahl der Fälle teilen
+
+$$ \bar{x} = \frac{x_{1} + x_{2} + ... + x_{n}}{n} = \frac{1}{n} \sum_{i=i}^{n} x_{i} $$
+
+```{r mean}
+random_sample
+
+mean(random_sample)
+```
+
+# Verteilungsformen
+
+## Symmetrisch
+$$ x_{mod} = \tilde{x} = \bar{x} $$
+
+```{r, echo=FALSE, warning=FALSE}
+random_sample_symmetric <- round(rbeta(1000000, 5, 5), 3)
+
+# random_sample_symmetric <- round(rnorm(n = 10000, mean = 0, sd = 0.5), 1)
+
+# random_sample_symmetric <- round(fGarch::rsnorm(10000, mean = 0, sd = 0.5, xi = -10), 1)
+
+random_sample_symmetric %>% 
+  as_tibble() %>% 
+  ggplot(aes(value)) + 
+  geom_density() +
+  geom_vline(xintercept = modus(random_sample_symmetric), alpha = 0.25, linetype = 2) +
+  annotate("text", label = expression(x[mod]), x = modus(random_sample_symmetric), y = 1.5, size = 5) +
+  # geom_vline(xintercept = median(random_sample_symmetric), alpha = 0.25, linetype = 2) +
+  annotate("text", label = expression(tilde(x)) , x = modus(random_sample_symmetric), y = 1, size = 5) +
+  # geom_vline(xintercept = mean(random_sample_symmetric), alpha = 0.25, linetype = 2) +
+  annotate("text", label = expression(bar(x)), x = modus(random_sample_symmetric), y = 0.5, size = 5) 
+```
+
+
+
+
+## Linkssteil / Rechtsschief
+$$ x_{mod} < \tilde{x} < \bar{x} $$
+
+```{r, echo=FALSE, warning=FALSE}
+random_sample_right_skewed <- round(rbeta(1000000, 2, 4.5), 3)
+
+# random_sample_right_skewed <- round(rnorm(n = 10000, mean = 0, sd = 0.5), 1)
+
+# random_sample_right_skewed <- round(fGarch::rsnorm(10000, mean = 0, sd = 0.5, xi = -10), 1)
+
+random_sample_right_skewed %>% 
+  as_tibble() %>% 
+  ggplot(aes(value)) + 
+  geom_density() +
+  geom_vline(xintercept = modus(random_sample_right_skewed), alpha = 0.25, linetype = 2) +
+  annotate("text", label = expression(x[mod]), x = modus(random_sample_right_skewed), y = 1.5, size = 5) +
+  geom_vline(xintercept = median(random_sample_right_skewed), alpha = 0.25, linetype = 2) +
+  annotate("text", label = expression(tilde(x)), x = median(random_sample_right_skewed), y = 1, size = 5) +
+  geom_vline(xintercept = mean(random_sample_right_skewed), alpha = 0.25, linetype = 2) +
+  annotate("text", label = expression(bar(x)), x = mean(random_sample_right_skewed), y = 0.5, size = 5) 
+```
+
+## Rechtssteil / Linksschief
+$$ x_{mod} > \tilde{x} > \bar{x} $$
+
+```{r, echo=FALSE, warning=FALSE}
+random_sample_left_skewed <- round(rbeta(1000000, 4.5, 2), 3)
+
+random_sample_left_skewed %>% 
+  as_tibble() %>% 
+  ggplot(aes(value)) + 
+  geom_density() +
+  geom_vline(xintercept = modus(random_sample_left_skewed), alpha = 0.25, linetype = 2) +
+  annotate("text", label = expression(x[mod]), x = modus(random_sample_left_skewed), y = 1.5, size = 5) +
+  geom_vline(xintercept = median(random_sample_left_skewed), alpha = 0.25, linetype = 2) +
+  annotate("text", label = expression(tilde(x)), x = median(random_sample_left_skewed), y = 1, size = 5) +
+  geom_vline(xintercept = mean(random_sample_left_skewed), alpha = 0.25, linetype = 2) +
+  annotate("text", label = expression(bar(x)), x = mean(random_sample_left_skewed), y = 0.5, size = 5) 
+```
+
