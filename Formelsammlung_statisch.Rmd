@@ -157,81 +157,56 @@ random_sample_left_skewed %>%
 
 - Ordinales Skalenniveau
 - Differenz zwischen größter und kleinster Ausprägung
-<<<<<<< HEAD
 
-$$ R = x_{max} - x_{min} $$
-=======
 \large 
 $$\large  R = x_{max} - x_{min} $$
 \normalsize
->>>>>>> ch
 
 ## Interquartilsabstand (IQR)
 
 - Ordinales Skalenniveau
 - Intervall der mittleren 50% der Stichprobe
-<<<<<<< HEAD
 
-$$ IQR = Q_{0.75} - Q_{0.25} $$
-=======
 \large 
 $$\large  IQR = Q_{0.75} - Q_{0.25} $$
 \normalsize
->>>>>>> ch
+
 
 ## Variation (Summe der Abweichungsquadrate)
 
 - Metrisches Skalenniveau
 - Englisch: *Sum of squares / sum of squared deviations*
-<<<<<<< HEAD
 
-$$ SS_{x} = \sum_{i=1}^n (x_{i} - \bar{x})^2 $$
-=======
 \large 
 $$\large  SS_{x} = \sum_{i=1}^n (x_{i} - \bar{x})^2 $$
 \normalsize
->>>>>>> ch
 
 ## Varianz 
 
 - Metrisches Skalenniveau
 - Standardisierte Variation
-<<<<<<< HEAD
 
-$$ s_{x}^2 = \frac{1}{n} \sum_{i=1}^n (x_{i} - \bar{x})^2 $$
-=======
 \large 
 $$\large  s_{x}^2 = \frac{1}{n} \sum_{i=1}^n (x_{i} - \bar{x})^2 $$
 \normalsize
->>>>>>> ch
 
 ## Standardabweichung
 
 - Metrisches Skalenniveau
 - Quadratwurzel der Varianz
 - Durchschnittliche Abweichung vom Arithmetischen Mittel
-<<<<<<< HEAD
 
-$$ s_{x} = \sqrt{s_{x}^2} = \sqrt{\frac{1}{n} \sum_{i=1}^n (x_{i} - \bar{x})^2} $$
-=======
 \large 
 $$\large  s_{x} = \sqrt{s_{x}^2} = \sqrt{\frac{1}{n} \sum_{i=1}^n (x_{i} - \bar{x})^2} $$
 \normalsize
->>>>>>> ch
 
 ## Variationskoeffizient (Abweichungskoeffizient)
 
 - Metrisches Skalenniveau
 - Relatives Streuungsmaß, d.h. nicht abhängig von der Maßeinheit der Variable
 - Standardbweichung in Relation zum Arithmetischen Mittel
-<<<<<<< HEAD
 
-$$ V_{x} = \frac{s_{x}}{\bar{x}} $$
-
-
-
-=======
 \large 
 $$\large V_{x} = \frac{s_{x}}{\bar{x}} $$
 \normalsize
->>>>>>> ch
+
