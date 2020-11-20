@@ -138,3 +138,51 @@ random_sample_left_skewed %>%
   annotate("text", label = expression(bar(x)), x = mean(random_sample_left_skewed), y = 0.5, size = 5) 
 ```
 
+# Streuungsmaße
+
+## Spannweite
+
+- Ordinales Skalenniveau
+- Differenz zwischen größter und kleinster Ausprägung
+
+$$ R = x_{max} - x_{min} $$
+
+## Interquartilsabstand (IQR)
+
+- Ordinales Skalenniveau
+- Intervall der mittleren 50% der Stichprobe
+
+$$ IQR = Q_{0.75} - Q_{0.25} $$
+
+## Variation (Summe der Abweichungsquadrate)
+
+- Metrisches Skalenniveau
+- Englisch: *Sum of squares / sum of squared deviations*
+
+$$ SS_{x} = \sum_{i=1}^n (x_{i} - \bar{x})^2 $$
+
+## Varianz 
+
+- Metrisches Skalenniveau
+- Standardisierte Variation
+
+$$ s_{x}^2 = \frac{1}{n} \sum_{i=1}^n (x_{i} - \bar{x})^2 $$
+
+## Standardabweichung
+
+- Metrisches Skalenniveau
+- Quadratwurzel der Varianz
+- Durchschnittliche Abweichung vom Arithmetischen Mittel
+
+$$ s_{x} = \sqrt{s_{x}^2} = \sqrt{\frac{1}{n} \sum_{i=1}^n (x_{i} - \bar{x})^2} $$
+
+## Variationskoeffizient (Abweichungskoeffizient)
+
+- Metrisches Skalenniveau
+- Relatives Streuungsmaß, d.h. nicht abhängig von der Maßeinheit der Variable
+- Standardbweichung in Relation zum Arithmetischen Mittel
+
+$$ V_{x} = \frac{s_{x}}{\bar{x}} $$
+
+
+

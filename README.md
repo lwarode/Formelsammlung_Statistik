@@ -6,6 +6,6 @@ Enthalten sind unter anderem:
 
 - Maße der zentralen Tendenz
 - Verteilungsformen
-- Streuungsmaße (in der Planung)
+- Streuungsmaße
 - …
 
