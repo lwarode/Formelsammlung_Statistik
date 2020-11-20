@@ -2,6 +2,7 @@
 title: "Formelsammlung Statistik"
 author: "Lukas Warode"
 output: pdf_document
+fontsize: 10pt
 ---
 
 ```{r setup, include=FALSE}
@@ -9,7 +10,10 @@ library(tidyverse)
 
 theme_set(theme_classic())
 
-knitr::opts_chunk$set(fig.width = 4, fig.height = 2.5, fig.align = "center")
+knitr::opts_chunk$set(fig.width = 4, 
+                      fig.height = 2.5, 
+                      fig.align = "center",
+                      cache = FALSE)
 
 modus <- function(var) {
   table(var) %>% 
@@ -27,7 +31,9 @@ modus <- function(var) {
 - Nominales Skalenniveau
 - Häufigster Wert
 
-$$ x_{mod} $$
+\large 
+$$ \large x_{mod} $$ 
+\normalsize
 
 ## Median
 
@@ -35,7 +41,9 @@ $$ x_{mod} $$
 - Mittlere Ausprägung bei Anordnung der Variable
 
 Ungerade Anzahl an Fällen (n):
-$$ \tilde{x} = x_{(\frac{n+1}{2})}$$ 
+\large
+$$ \large \tilde{x} = x_{(\frac{n+1}{2})}$$ 
+\normalsize
 
 ```{r median I}
 set.seed(42)
@@ -48,8 +56,9 @@ median(random_sample)
 ```
 
 Gerade Anzahl an Fällen (n):
-$$ \tilde{x} =\frac{x_{(\frac{n}{2})} + x_{(\frac{n}{2}+1)}}{2}$$
-
+\large 
+$$\large \tilde{x} =\frac{x_{(\frac{n}{2})} + x_{(\frac{n}{2}+1)}}{2}$$
+\normalsize
 ```{r median II}
 random_sample <- random_sample[random_sample != max(random_sample)]
 
@@ -63,8 +72,9 @@ median(random_sample)
 - Metrisches Skalenniveau
 - Summe aller Fälle durch Anzahl der Fälle teilen
 
-$$ \bar{x} = \frac{x_{1} + x_{2} + ... + x_{n}}{n} = \frac{1}{n} \sum_{i=i}^{n} x_{i} $$
-
+\large 
+$$\large \bar{x} = \frac{x_{1} + x_{2} + ... + x_{n}}{n} = \frac{1}{n} \sum_{i=i}^{n} x_{i} $$
+\normalsize
 ```{r mean}
 random_sample
 
@@ -74,8 +84,9 @@ mean(random_sample)
 # Verteilungsformen
 
 ## Symmetrisch
-$$ x_{mod} = \tilde{x} = \bar{x} $$
-
+\large 
+$$\large x_{mod} = \tilde{x} = \bar{x} $$
+\normalsize
 ```{r, echo=FALSE, warning=FALSE}
 random_sample_symmetric <- round(rbeta(1000000, 5, 5), 3)
 
@@ -99,8 +110,9 @@ random_sample_symmetric %>%
 
 
 ## Linkssteil / Rechtsschief
-$$ x_{mod} < \tilde{x} < \bar{x} $$
-
+\large 
+$$\large x_{mod} < \tilde{x} < \bar{x} $$
+\normalsize
 ```{r, echo=FALSE, warning=FALSE}
 random_sample_right_skewed <- round(rbeta(1000000, 2, 4.5), 3)
 
@@ -121,8 +133,9 @@ random_sample_right_skewed %>%
 ```
 
 ## Rechtssteil / Linksschief
-$$ x_{mod} > \tilde{x} > \bar{x} $$
-
+\large 
+$$\large x_{mod} > \tilde{x} > \bar{x} $$
+\normalsize
 ```{r, echo=FALSE, warning=FALSE}
 random_sample_left_skewed <- round(rbeta(1000000, 4.5, 2), 3)
 
