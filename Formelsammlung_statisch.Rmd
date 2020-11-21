@@ -196,7 +196,11 @@ $$\large  s_{x}^2 = \frac{1}{n} \sum_{i=1}^n (x_{i} - \bar{x})^2 $$
 - Durchschnittliche Abweichung von Werten zum Arithmetischen Mittel
 
 \large 
+<<<<<<< HEAD
 $$\large  \sigma_{x_{Population}} = \sqrt{\sigma_{x}^2} = \sqrt{\frac{1}{n} \sum_{i=1}^n (x_{i} - \bar{x})^2} $$
+=======
+$$\large  s_{x_{Population}} = \sqrt{s_{x}^2} = \sqrt{\frac{1}{n} \sum_{i=1}^n (x_{i} - \bar{x})^2} $$
+>>>>>>> e0befee2f50d552f2aff14a8ab7a5c1449a788a2
 $$\large  s_{x_{Stichprobe}} = \sqrt{s_{x}^2} = \sqrt{\frac{1}{n-1} \sum_{i=1}^n (x_{i} - \bar{x})^2} $$
 
 \normalsize
@@ -213,6 +217,7 @@ $$\large V_{x} = \frac{s_{x}}{\bar{x}} $$
 
 # Standardfehler
 
+<<<<<<< HEAD
 - (Durchschnittliche) Abweichung von Stichprobenkennwerten zu Populationskennwerten, z.B. vom Mittelwert
 
 ## Standardfehler des Arithmetischen Mittelwertes (*Standard error of the mean*)
@@ -223,3 +228,6 @@ $$\large s_{\bar{x}_{Stichprobe}} = \frac{s}{\sqrt{n}} = \sqrt{\frac{s^2}{n}} $$
 $$\large \hat{\sigma}_{\bar{x}_{Population, \ geschätzt}} = \frac{s}{\sqrt{n-1}} = \sqrt{\frac{s^2}{n-1}} $$
 \normalsize
 
+=======
+## 
+>>>>>>> e0befee2f50d552f2aff14a8ab7a5c1449a788a2
