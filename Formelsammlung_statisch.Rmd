@@ -106,9 +106,6 @@ random_sample_symmetric %>%
   annotate("text", label = expression(bar(x)), x = modus(random_sample_symmetric), y = 0.5, size = 5) 
 ```
 
-
-
-
 ## Linkssteil / Rechtsschief
 \large 
 $$\large x_{mod} < \tilde{x} < \bar{x} $$
@@ -171,7 +168,6 @@ $$\large  R = x_{max} - x_{min} $$
 $$\large  IQR = Q_{0.75} - Q_{0.25} $$
 \normalsize
 
-
 ## Variation (Summe der Abweichungsquadrate)
 
 - Metrisches Skalenniveau
@@ -194,10 +190,12 @@ $$\large  s_{x}^2 = \frac{1}{n} \sum_{i=1}^n (x_{i} - \bar{x})^2 $$
 
 - Metrisches Skalenniveau
 - Quadratwurzel der Varianz
-- Durchschnittliche Abweichung vom Arithmetischen Mittel
+- Durchschnittliche Abweichung von Werten zum Arithmetischen Mittel
 
 \large 
-$$\large  s_{x} = \sqrt{s_{x}^2} = \sqrt{\frac{1}{n} \sum_{i=1}^n (x_{i} - \bar{x})^2} $$
+$$\large  s_{x_{Population}} = \sqrt{s_{x}^2} = \sqrt{\frac{1}{n} \sum_{i=1}^n (x_{i} - \bar{x})^2} $$
+$$\large  s_{x_{Stichprobe}} = \sqrt{s_{x}^2} = \sqrt{\frac{1}{n-1} \sum_{i=1}^n (x_{i} - \bar{x})^2} $$
+
 \normalsize
 
 ## Variationskoeffizient (Abweichungskoeffizient)
@@ -210,3 +208,6 @@ $$\large  s_{x} = \sqrt{s_{x}^2} = \sqrt{\frac{1}{n} \sum_{i=1}^n (x_{i} - \bar{
 $$\large V_{x} = \frac{s_{x}}{\bar{x}} $$
 \normalsize
 
+# Standardfehler
+
+## 
