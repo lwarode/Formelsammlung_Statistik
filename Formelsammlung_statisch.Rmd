@@ -217,9 +217,26 @@ $$\large V_{x} = \frac{s_{x}}{\bar{x}} $$
 
 ## Standardfehler des Arithmetischen Mittelwertes (*Standard error of the mean*)
 
+- Symbol des Populationsmittelwertes: $\mu$
+- Symbol des Stichprobenmittelwertes $\bar{x}$
+
 \large
 $$\large \sigma_{\bar{x}_{Population}} = \frac{\sigma}{\sqrt{n}} = \sqrt{\frac{\sigma^2}{n}} $$
 $$\large s_{\bar{x}_{Stichprobe}} = \frac{s}{\sqrt{n}} = \sqrt{\frac{s^2}{n}} $$
 $$\large \hat{\sigma}_{\bar{x}_{Population, \ geschätzt}} = \frac{s}{\sqrt{n-1}} = \sqrt{\frac{s^2}{n-1}} $$
 \normalsize
 
+## Standardfehler des Anteilswertes
+
+- Symbol des Populationsanteilswertes: $\pi$
+- Symbol des Stichprobenanteilswertes: $p_{x}$
+
+\large
+$$\large \sigma(p_{x})_{Population} = \sqrt{\frac{\pi_{x} \cdot (1-\pi_{x})}{n}} $$
+\normalsize
+
+Schätzung der Populationsvarianz: $\pi_{x} \cdot (1-\pi_{x})$ aus der Stichprobenvarianz: $p_{x} \cdot (1-p_{x})$
+
+\large
+$$\large \hat{\sigma}(p_{x})_{Population} = \sqrt{\frac{p_{x} \cdot (1-p_{x})}{n}} $$
+\normalsize
