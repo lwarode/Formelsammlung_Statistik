@@ -240,3 +240,18 @@ Schätzung der Populationsvarianz: $\pi_{x} \cdot (1-\pi_{x})$ aus der Stichprob
 \large
 $$\large \hat{\sigma}(p_{x})_{Population} = \sqrt{\frac{p_{x} \cdot (1-p_{x})}{n}} $$
 \normalsize
+
+# Konfidenzintervall
+
+- Generalisierbarkeit von Parametern aus der Stichprobe (auf die Population)
+- Geschätzter Intervallbereich, in dem Parameter der Grundgesamtheit mit einer bestimmten Wahrscheinlichkeit liegen
+
+- Z-Standardisierung: $z = \frac{x-\mu}{\sigma}$
+
+## Konfidenzintervall des Populationsmittelwertes ($\mu_{x}$)
+
+- Kleine Stichproben: t-Verteilung
+- Große Stichproben: Standardnormalverteilung
+
+Bestimmung der Intervallgrenzen: 
+$\bar{x} - \frac{s_{x}}{\sqrt{n-1}} \cdot z_{1 - \frac{\alpha}{2}} < \mu_{x} < \bar{x} + \frac{s_{x}}{\sqrt{n-1}}$
