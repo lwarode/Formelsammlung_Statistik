@@ -254,4 +254,4 @@ $$\large \hat{\sigma}(p_{x})_{Population} = \sqrt{\frac{p_{x} \cdot (1-p_{x})}{n
 - Große Stichproben: Standardnormalverteilung
 
 Bestimmung der Intervallgrenzen: 
-$\bar{x} - \frac{s_{x}}{\sqrt{n-1}} \cdot z_{1 - \frac{\alpha}{2}} < \mu_{x} < \bar{x} + \frac{s_{x}}{\sqrt{n-1}}$
+$\bar{x} - \frac{s_{x}}{\sqrt{n-1}} \cdot z_{(1 - \frac{\alpha}{2})} < \mu_{x} < \bar{x} + \frac{s_{x}}{\sqrt{n-1}} \cdot z_{(1 - \frac{\alpha}{2})}$
