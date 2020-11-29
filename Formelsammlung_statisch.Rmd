@@ -254,4 +254,17 @@ $$\large \hat{\sigma}(p_{x})_{Population} = \sqrt{\frac{p_{x} \cdot (1-p_{x})}{n
 - Große Stichproben: Standardnormalverteilung
 
 Bestimmung der Intervallgrenzen: 
-$\bar{x} - \frac{s_{x}}{\sqrt{n-1}} \cdot z_{(1 - \frac{\alpha}{2})} < \mu_{x} < \bar{x} + \frac{s_{x}}{\sqrt{n-1}} \cdot z_{(1 - \frac{\alpha}{2})}$
+
+\large
+$$\large \bar{x} - \frac{s_{x}}{\sqrt{n-1}} \cdot z_{(1 - \frac{\alpha}{2})} < \mu_{x} < \bar{x} + \frac{s_{x}}{\sqrt{n-1}} \cdot z_{(1 - \frac{\alpha}{2})}$$
+\normalsize
+
+## Konfidenzintervall des Populationsanteilswertes ($\pi_{x}$)
+
+- Standardnormalverteilung (wenn Stichprobe ausreichend groß)
+
+Bestimmung der Intervallgrenzen: 
+
+\large
+$$\large p_{x} - \sqrt{\frac{p_{x} \cdot (1-p_{x})}{n}} \cdot z_{(1 - \frac{\alpha}{2})} < \pi_{x} < p_{x} + \sqrt{\frac{p_{x} \cdot (1-p_{x})}{n}} \cdot z_{(1 - \frac{\alpha}{2})}$$
+\normalsize
