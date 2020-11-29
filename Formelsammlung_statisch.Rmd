@@ -223,7 +223,7 @@ $$\large V_{x} = \frac{s_{x}}{\bar{x}} $$
 \large
 $$\large \sigma_{\bar{x}_{Population}} = \frac{\sigma}{\sqrt{n}} = \sqrt{\frac{\sigma^2}{n}} $$
 $$\large s_{\bar{x}_{Stichprobe}} = \frac{s}{\sqrt{n}} = \sqrt{\frac{s^2}{n}} $$
-$$\large \hat{\sigma}_{\bar{x}_{Population, \ geschätzt}} = \frac{s}{\sqrt{n-1}} = \sqrt{\frac{s^2}{n-1}} $$
+$$\large \hat{\sigma}_{\bar{x}_{Population, \ geschätzt}} = \frac{s}{\sqrt{n-1}} = \sqrt{\frac{s^2}{n-1}}$$
 \normalsize
 
 ## Standardfehler des Anteilswertes
@@ -268,3 +268,20 @@ Bestimmung der Intervallgrenzen:
 \large
 $$\large p_{x} - \sqrt{\frac{p_{x} \cdot (1-p_{x})}{n}} \cdot z_{(1 - \frac{\alpha}{2})} < \pi_{x} < p_{x} + \sqrt{\frac{p_{x} \cdot (1-p_{x})}{n}} \cdot z_{(1 - \frac{\alpha}{2})}$$
 \normalsize
+
+# t-Test
+
+## t-Test für 2 Mittelwerte
+
+- $H_{0}$: $\mu_{1} - \mu_{2} = 0$
+- $H_{A}$: $\mu_{1} - \mu_{2} \neq 0$
+
+Teststatistik: 
+
+\large
+$$\large Z = \frac{\bar{x}_{1} - \bar{x}_{2}}{\sqrt{\frac{s_{x_{1}}^2}{n_{1}-1}-\frac{s_{x_{2}}^2}{n_{2}-1}}} $$
+\normalsize
+
+- Kritische Testwerte bei $z_{\frac{\alpha}{2}}$ und $z_{(1 - \frac{\alpha}{2})}$
+
+
