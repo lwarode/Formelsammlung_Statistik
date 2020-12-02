@@ -90,6 +90,7 @@ mean(random_sample)
 $$\large x_{mod} = \tilde{x} = \bar{x} $$
 \normalsize
 ```{r, echo=FALSE, warning=FALSE}
+set.seed(42)
 random_sample_symmetric <- round(rbeta(1000000, 5, 5), 3)
 
 # random_sample_symmetric <- round(rnorm(n = 10000, mean = 0, sd = 0.5), 1)
@@ -114,6 +115,7 @@ random_sample_symmetric %>%
 $$\large x_{mod} < \tilde{x} < \bar{x} $$
 \normalsize
 ```{r, echo=FALSE, warning=FALSE}
+set.seed(42)
 random_sample_right_skewed <- round(rbeta(1000000, 2, 4.5), 3)
 
 # random_sample_right_skewed <- round(rnorm(n = 10000, mean = 0, sd = 0.5), 1)
@@ -138,6 +140,7 @@ random_sample_right_skewed %>%
 $$\large x_{mod} > \tilde{x} > \bar{x} $$
 \normalsize
 ```{r, echo=FALSE, warning=FALSE}
+set.seed(42)
 random_sample_left_skewed <- round(rbeta(1000000, 4.5, 2), 3)
 
 random_sample_left_skewed %>% 
@@ -271,7 +274,20 @@ $$\large p_{x} - \sqrt{\frac{p_{x} \cdot (1-p_{x})}{n}} \cdot z_{(1 - \frac{\alp
 
 # t-Test
 
-## t-Test für 2 Mittelwerte
+## t-Test: Mittelwert
+
+### t-Test für einen Mittelwert
+
+- $H_{0}$: $\mu_{1} = \mu$
+- $H_{A}$: $\mu_{1} \neq \mu$
+
+Teststatistik: 
+
+\large
+$$\large Z = \frac{\bar{x}-\mu}{\frac{s_{x}}{\sqrt{n-1}}} $$
+\normalsize
+
+### t-Test für 2 Mittelwerte
 
 - $H_{0}$: $\mu_{1} - \mu_{2} = 0$
 - $H_{A}$: $\mu_{1} - \mu_{2} \neq 0$
