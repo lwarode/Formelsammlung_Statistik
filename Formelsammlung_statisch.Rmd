@@ -350,10 +350,32 @@ Berechnung der Freiheitsgrade (*degrees of freedom*): $df = (I-1) \cdot (J-1)$
 
 \large
 $$\large \phi = \sqrt{\frac{\chi^2}{n}} $$
-$$\large Cramer`s \ V = \sqrt{\frac{\chi^2}{n \cdot (k-1)}} \\ k = Kleinste \ Zeilenzahl \ oder \ Spaltenzahl$$
+$$\large Cramer`s \ V = \sqrt{\frac{\chi^2}{n \cdot (k-1)}}$$
 $$\large Kontingenzkoeffizient \ C =  \sqrt{\frac{\chi^2}{\chi^2 + n}}$$
 $$\large C_{korrigiert} = \frac{C}{\sqrt{\frac{k-1}{k}}} $$
 \normalsize
 
+- $k = Kleinste \ Zeilenzahl \ oder \ Spaltenzahl$
+
+# F-Test -- Einfaktorielle Varianzanalyse
+  
+- F-Test testet den Anteil erklärter Varianz an unerklärter Varianz zwischen mehreren Gruppen
+- $x_{ij}$:
+- $\bar{x}_j$: Mittelwert der Gruppe $j$
+
+- Varianz zwischen den Gruppen: $\sum_{j=1}^p n_j (\bar{x}_j - \bar{x})^2$
+  - $df_1: j - 1$
+
+- Varianz innerhalb der Gruppen: $\sum_{j=1}^p \sum_{i=1}^{n_j} (x_{ij} - \bar{x}_j)^2$
+  - $df_2: n - j$
+
+Teststatistik:
+
+\large
+$$\large F = \frac{erklärte \ Varianz}{unerklärte \ Varianz} = \frac{\frac{Varianz \ zwischen \ den \ Gruppen}{df_1}}{\frac{Varianz \ innerhalb \ der \ Gruppen}{df_2}} = \frac{\frac{\sum_{j=1}^p n_j (\bar{x}_j - \bar{x})^2}{j-1}}{\frac{\sum_{j=1}^p \sum_{i=1}^{n_j} (x_{ij} - \bar{x}_j)^2}{n-j}}$$
+\normalsize
+
 
   
+  
+
