@@ -325,3 +325,35 @@ Teststatistik:
 $$\large Z = \frac{p_{1} - p_{2}}{\sqrt{\frac{p_1 \cdot (1-p_1)}{n_1} + \frac{p_2 \cdot (1-p_2)}{n_2}}} $$
 \normalsize
 - Kritische Testwerte bei $z_{\frac{\alpha}{2}}$ und $z_{(1 - \frac{\alpha}{2})}$
+
+# Chi-Quadrat-Unabhängigkeitstest ($\chi^2$)
+
+- Bivariater Test auf stochastische Unabhängigkeit
+  - $H_{0}$: Beide Zufallsvariablen sind stochastisch *unabhängig* voneinander
+  - $H_{A}$: Beide Zufallsvariablen sind stochastisch *nicht unabhängig* voneinander
+  
+\large
+$$\large \chi^2 = \sum_{i=1}^I \sum_{j=1}^J \frac{(n_{ij} - e_{ij})^2}{e_{ij}} $$
+\normalsize
+
+- $i$: *"Zeilen"*
+- $j$: *"Spalten"*
+- $n_{ij}$: Beobachtete Häufigkeiten
+- $e_{ij}$: Erwartete Häufigkeiten
+  - $e_{ij} = \frac{n_i \cdot n_j}{n}$
+    - $n_i$: Zeilenhäufigkeit
+    - $n_j$: Spaltenhäufigkeit
+    
+Berechnung der Freiheitsgrade (*degrees of freedom*): $df = (I-1) \cdot (J-1)$
+
+## Zusammenhangsmaße auf Basis von $\chi^2$  
+
+\large
+$$\large \phi = \sqrt{\frac{\chi^2}{n}} $$
+$$\large Cramer`s \ V = \sqrt{\frac{\chi^2}{n \cdot (k-1)}} \\ k = Kleinste \ Zeilenzahl \ oder \ Spaltenzahl$$
+$$\large Kontingenzkoeffizient \ C =  \sqrt{\frac{\chi^2}{\chi^2 + n}}$$
+$$\large C_{korrigiert} = \frac{C}{\sqrt{\frac{k-1}{k}}} $$
+\normalsize
+
+
+  
