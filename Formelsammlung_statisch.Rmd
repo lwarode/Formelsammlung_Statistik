@@ -375,7 +375,22 @@ Teststatistik:
 $$\large F = \frac{erklärte \ Varianz}{unerklärte \ Varianz} = \frac{\frac{Varianz \ zwischen \ den \ Gruppen}{df_1}}{\frac{Varianz \ innerhalb \ der \ Gruppen}{df_2}} = \frac{\frac{\sum_{j=1}^p n_j (\bar{x}_j - \bar{x})^2}{j-1}}{\frac{\sum_{j=1}^p \sum_{i=1}^{n_j} (x_{ij} - \bar{x}_j)^2}{n-j}}$$
 \normalsize
 
+# Metrische Zusammenhangsmaße
 
-  
-  
+## Kovarianz
 
+- Kovarianz: Gemeinsame Varianz von 2 Variablen
+  - $[-\infty, \ \infty]$
+  
+\large
+$$\large Cov(x,y) = \frac{\sum_{i=1}^n(x_i - \bar{x})(y_i - \bar{y})}{n-1} $$
+\normalsize
+
+## Korrelation
+
+- Korrelationskoeffizient: Standardisierte Kovarianz
+  - $[-1, \ 1]$
+
+\large
+$$\large Corr(x,y) = \frac{Cov(x,y)}{\sigma_x \cdot \sigma_y} = \frac{\frac{\sum_{i=1}^n(x_i - \bar{x})(y_i - \bar{y})}{n-1}}{\sigma_x \cdot \sigma_y} = \frac{\frac{\sum_{i=1}^n(x_i - \bar{x})(y_i - \bar{y})}{n-1}}{\sqrt{\sum_{i=1}^n(x_i - \bar{x})^2 \cdot \sum_{i=1}^n(y_i - \bar{y})^2}} $$
+\normalsize
