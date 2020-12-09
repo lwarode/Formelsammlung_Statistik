@@ -10,5 +10,9 @@ Enthalten sind bis jetzt:
 - Standardfehler
 - Konfidenzintervalle
 - t-Test
-- …
+- $\chi^2$-Test
+- F-Test
+- Metrische Zusammenhangsmaße
+  - Kovarianz
+  - Korrelation
 
