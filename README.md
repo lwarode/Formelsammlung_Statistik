@@ -6,13 +6,17 @@ Enthalten sind bis jetzt:
 
 - Maße der zentralen Tendenz
 - Verteilungsformen
-- Streuungsmaße
+- Univariate Streuungsmaße
 - Standardfehler
 - Konfidenzintervalle
 - t-Test
+  - Mittelwert
+  - Populationsanteil
 - Chi-Quadrat-Test
 - F-Test
 - Metrische Zusammenhangsmaße
   - Kovarianz
   - Korrelation
-
+- Lineare Regression
+  - Einfache lineare Regression (bivariat)
+  - …
