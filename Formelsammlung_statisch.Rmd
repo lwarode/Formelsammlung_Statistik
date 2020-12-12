@@ -190,7 +190,7 @@ $$\large  SS_{x} = \sum_{i=1}^n (x_{i} - \bar{x})^2 $$
 - Standardisierte Variation
 
 \large 
-$$\large  s_{x}^2 = \frac{1}{n} \sum_{i=1}^n (x_{i} - \bar{x})^2 $$
+$$\large  Var(x) = s_{x}^2 = \frac{1}{n} \sum_{i=1}^n (x_{i} - \bar{x})^2 $$
 \normalsize
 
 ## Standardabweichung
@@ -360,7 +360,7 @@ $$\large C_{korrigiert} = \frac{C}{\sqrt{\frac{k-1}{k}}} $$
 # F-Test -- Einfaktorielle Varianzanalyse
   
 - F-Test testet den Anteil erklärter Varianz an unerklärter Varianz zwischen mehreren Gruppen
-- $x_{ij}$:
+- $x_{ij}$: Beobachtung $i$ in der Gruppe $j$
 - $\bar{x}_j$: Mittelwert der Gruppe $j$
 
 - Varianz zwischen den Gruppen: $\sum_{j=1}^p n_j (\bar{x}_j - \bar{x})^2$
@@ -386,12 +386,48 @@ $$\large F = \frac{erklärte \ Varianz}{unerklärte \ Varianz} = \frac{\frac{Var
 $$\large Cov(x,y) = \frac{\sum_{i=1}^n(x_i - \bar{x})(y_i - \bar{y})}{n} = \frac{1}{n} \sum_{i=1}^n(x_i - \bar{x})(y_i - \bar{y})$$
 \normalsize
 
-## Korrelation
+## Korrelation (Pearson-Korrelation: $r$)
 
 - Korrelationskoeffizient: Standardisierte Kovarianz
   - $[-1, \ 1]$
 
 \large
-$$\large Corr(x,y) = \frac{Cov(x,y)}{\sigma_x \cdot \sigma_y} = \frac{\frac{1}{n} \sum_{i=1}^n(x_i - \bar{x})(y_i - \bar{y})} {\sigma_x \cdot \sigma_y} = \frac{\frac{1}{n}\sum_{i=1}^n(x_i - \bar{x})(y_i - \bar{y})}{\sqrt{\frac{1}{n}\sum_{i=1}^n(x_i - \bar{x})^2 \cdot \frac{1}{n}\sum_{i=1}^n(y_i - \bar{y})^2}}$$
+$$\large r_{x, y} =  Corr(x,y) = \frac{Cov(x,y)}{\sigma_x \cdot \sigma_y} = \frac{\frac{1}{n} \sum_{i=1}^n(x_i - \bar{x})(y_i - \bar{y})} {\sigma_x \cdot \sigma_y} = \frac{\frac{1}{n}\sum_{i=1}^n(x_i - \bar{x})(y_i - \bar{y})}{\sqrt{\frac{1}{n}\sum_{i=1}^n(x_i - \bar{x})^2 \cdot \frac{1}{n}\sum_{i=1}^n(y_i - \bar{y})^2}}$$
 $$\large = \frac{\sum_{i=1}^n(x_i - \bar{x})(y_i - \bar{y})} {\sqrt{\sum_{i=1}^n(x_i - \bar{x})^2 \cdot \sum_{i=1}^n(y_i - \bar{y})^2}}$$
 \normalsize
+
+# Lineare Regression
+
+## Einfache lineare Regression (bivariat)
+
+Lineare Modellfunktion: $y = \alpha + \beta x$
+
+- $y$: Zielgröße
+- $\alpha$: Konstante ($y$-Achsenabschnitt)
+- $\beta$: Steigung
+
+\
+Lineare Regressionsgleichung: $y_i = \alpha + \beta x_i + \varepsilon_i$
+
+- Ziel: Finden der geschätzten Werte $\hat{\alpha}$ und $\hat{\beta}$ für die Parameter $\alpha$ und $\beta$, die die Regressionsgleichung am besten nachbilden können (den besten *fit* ermöglichen)
+- $\varepsilon_i$: Fehlerterm (Residuum): Abweichung der empirischen Beobachtung $y_i$ und dem geschätzten Wert der Regressionsgleichung $\hat{y_i}$
+- "Geschätzte" Abweichung der Regressionsgerade von der empirischen Beobachtung: $\hat{\varepsilon_i} = y_i - \hat{y_i} = y_i - \alpha - \beta_{x_i}$
+
+\
+Ziel der geschätzten Regressiongleichung (Regressionsgerade): Minimierung der Summe der residualen Quadrate $\hat{\varepsilon_i}^2$
+- Minimierung von: $\sum_{i=1}^n \hat{\varepsilon_i}^2 = \sum_{i=1}^n (y_i - \alpha - \beta_{x_i})^2$
+
+\
+Schätzung des Regressionskoeffizienten $\beta$: $\hat{\beta}$
+
+\large
+$$\large \hat{\beta} = \frac{Cov(x, y)}{Var(x)} = \frac{\frac{1}{n} \sum_{i=1}^n(x_i - \bar{x})(y_i - \bar{y})} {\frac{1}{n} \sum_{i=1}^n (x_{i} - \bar{x})^2} = \frac{\sum_{i=1}^n(x_i - \bar{x})(y_i - \bar{y})} {\sum_{i=1}^n (x_{i} - \bar{x})^2}$$
+$$\large = r_{x, y} \cdot \frac{s_y}{s_x} = \frac{\sum_{i=1}^n(x_i - \bar{x})(y_i - \bar{y})} {\sqrt{\sum_{i=1}^n(x_i - \bar{x})^2 \cdot \sum_{i=1}^n(y_i - \bar{y})^2}} \cdot \frac{\sqrt{\frac{1}{n-1} \sum_{i=1}^n (y_i - \bar{y_i})^2}} {\sqrt{\frac{1}{n-1} \sum_{i=1}^n (x_i - \bar{x_i})^2}} $$
+\normalsize
+
+Schätzung der Regressionskonstanten $\alpha$: $\hat{\alpha}$
+
+\large
+$$\large \hat{\alpha} =  \bar{y} - \hat{\beta}\bar{x}$$
+\normalsize
+
