@@ -18,5 +18,5 @@ Enthalten sind bis jetzt:
   - Kovarianz
   - Korrelation
 - Lineare Regression
-  - Einfache lineare Regression (bivariat)
-  - …
+  - Einfache lineare Regression
+  - Multiple lineare Regression
