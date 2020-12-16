@@ -13,7 +13,9 @@ theme_set(theme_classic())
 knitr::opts_chunk$set(fig.width = 4, 
                       fig.height = 2.5, 
                       fig.align = "center",
-                      cache = FALSE)
+                      cache=FALSE,
+                      echo=FALSE,
+                      warning=FALSE)
 
 modus <- function(var) {
   table(var) %>% 
@@ -89,7 +91,7 @@ mean(random_sample)
 \large 
 $$\large x_{mod} = \tilde{x} = \bar{x} $$
 \normalsize
-```{r, echo=FALSE, warning=FALSE}
+```{r}
 set.seed(42)
 random_sample_symmetric <- round(rbeta(1000000, 5, 5), 3)
 
@@ -114,7 +116,7 @@ random_sample_symmetric %>%
 \large 
 $$\large x_{mod} < \tilde{x} < \bar{x} $$
 \normalsize
-```{r, echo=FALSE, warning=FALSE}
+```{r}
 set.seed(42)
 random_sample_right_skewed <- round(rbeta(1000000, 2, 4.5), 3)
 
@@ -139,7 +141,7 @@ random_sample_right_skewed %>%
 \large 
 $$\large x_{mod} > \tilde{x} > \bar{x} $$
 \normalsize
-```{r, echo=FALSE, warning=FALSE}
+```{r}
 set.seed(42)
 random_sample_left_skewed <- round(rbeta(1000000, 4.5, 2), 3)
 
@@ -398,7 +400,7 @@ $$\large = \frac{\sum_{i=1}^n(x_i - \bar{x})(y_i - \bar{y})} {\sqrt{\sum_{i=1}^n
 
 # Lineare Regression
 
-## Einfache lineare Regression (bivariat)
+## Einfache lineare Regression
 
 Lineare Modellfunktion: $y = \alpha + \beta x$
 
@@ -410,6 +412,7 @@ Lineare Modellfunktion: $y = \alpha + \beta x$
 Lineare Regressionsgleichung: $y_i = \alpha + \beta x_i + \varepsilon_i$
 
 - Ziel: Finden der geschätzten Werte $\hat{\alpha}$ und $\hat{\beta}$ für die Parameter $\alpha$ und $\beta$, die die Regressionsgleichung am besten nachbilden können (den besten *fit* ermöglichen)
+- $x_i$: Beobachtung $i$ der unabhängigen Variable $x$
 - $\varepsilon_i$: Fehlerterm (Residuum): Abweichung der empirischen Beobachtung $y_i$ und dem geschätzten Wert der Regressionsgleichung $\hat{y_i}$
 - "Geschätzte" Abweichung der Regressionsgerade von der empirischen Beobachtung: $\hat{\varepsilon_i} = y_i - \hat{y_i} = y_i - \alpha - \beta_{x_i}$
 
@@ -430,4 +433,23 @@ Schätzung der Regressionskonstanten $\alpha$: $\hat{\alpha}$
 \large
 $$\large \hat{\alpha} =  \bar{y} - \hat{\beta}\bar{x}$$
 \normalsize
+
+## Multiple lineare Regression
+
+Multiple lineare Regressionsgleichung: $y_i = \beta_0 + \beta_1x_{i1} + \beta_2x_{i2} + … + \beta_kx_{ik} + \varepsilon_i$
+
+- Schätzung der linearen Regression anhand $k$ unabhängiger Variablen für $i=1, \ …, \ n$
+
+\
+Matrixschreibweise der Multiplen linearern Regressionsgleichung: $\mathbf{y = X \beta + \varepsilon}$ 
+
+- Schätzung von $\beta$ anhand Kleinste-Quadrate-Schätzung (*OLS*): 
+
+\large
+$$\hat{\beta} = \begin{pmatrix} \beta_0 \\ \beta_1 \\ \vdots \\ \beta_k \end{pmatrix} = \mathbf{(X'X)^{-1} X'y}$$
+\normalsize
+
+- $\mathbf{X'}$: Transponierte Matrix von $\mathbf{X}$
+- $\mathbf{(X'X)^{-1}}$: Inverse Matrix von $\mathbf{X'X}$
+
 
