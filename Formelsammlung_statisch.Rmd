@@ -441,7 +441,19 @@ Multiple lineare Regressionsgleichung: $y_i = \beta_0 + \beta_1x_{i1} + \beta_2x
 - Schätzung der linearen Regression anhand $k$ unabhängiger Variablen für $i=1, \ …, \ n$
 
 \
-Matrixschreibweise der Multiplen linearern Regressionsgleichung: $\mathbf{y = X \beta + \varepsilon}$ 
+Matrixschreibweise der Multiplen linearern Regressionsgleichung: 
+
+\large
+$$\begin{pmatrix} y_1 \\ y_2 \\ \vdots \\ y_n \end{pmatrix} = 
+\begin{pmatrix} x_{11} & x_{12} & \cdots & x_{1k} 
+\\ x_{21} & x_{22} & \cdots & x_{2k}
+\\ \vdots & \vdots & \ddots & \vdots 
+\\ x_{n1} & x_{n2} & \cdots & x_{nk} \end{pmatrix} 
+\begin{pmatrix} \beta_1 \\ \beta_2 \\ \vdots \\ \beta_k \end{pmatrix} +
+\begin{pmatrix} \varepsilon_1 \\ \varepsilon_2 \\ \vdots \\ \varepsilon_k \end{pmatrix}
+$$
+$$\mathbf{y = X \beta + \varepsilon}$$
+\normalsize
 
 - Schätzung von $\beta$ anhand Kleinste-Quadrate-Schätzung (*OLS*): 
 
