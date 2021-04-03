@@ -434,6 +434,12 @@ Schätzung der Regressionskonstanten $\alpha$: $\hat{\alpha}$
 $$\large \hat{\alpha} =  \bar{y} - \hat{\beta}\bar{x}$$
 \normalsize
 
+## Determinationskoeffizient $R^2$
+
+- "Erklärungsleistung" eines Regressionsmodells: Anteil erklärter Varianz an Gesamtvarianz
+- Maß der Stärke eines Zusammenhangs
+
+
 ## Multiple lineare Regression
 
 Multiple lineare Regressionsgleichung: $y_i = \beta_0 + \beta_1x_{i1} + \beta_2x_{i2} + … + \beta_kx_{ik} + \varepsilon_i$
@@ -441,7 +447,7 @@ Multiple lineare Regressionsgleichung: $y_i = \beta_0 + \beta_1x_{i1} + \beta_2x
 - Schätzung der linearen Regression anhand $k$ unabhängiger Variablen für $i=1, \ …, \ n$
 
 \
-Matrixschreibweise der Multiplen linearern Regressionsgleichung: 
+Matrixschreibweise der Multiplen linearen Regressionsgleichung: 
 
 \large
 $$\begin{pmatrix} y_1 \\ y_2 \\ \vdots \\ y_n \end{pmatrix} = 
