@@ -19,5 +19,5 @@ Enthalten sind bis jetzt:
   - Korrelation
 - Lineare Regression
   - Einfache lineare Regression
-  - Determinationskoeffizient $R^2$
+  - Determinationskoeffizient
   - Multiple lineare Regression
