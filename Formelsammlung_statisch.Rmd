@@ -446,10 +446,12 @@ $$\large R^2 = 1 - \frac{unerklärte \ Varianz}{Gesamtvarianz} = 1 - \frac{\sum_
 
 ### Adjustiertes (auch: korrigiertes) $R^2$ (Korrigierter Determinationskoeffizient)
 
-- 
+- "Korrektur" des $R^2$ für Anwendung innerhalb von Stichproben 
+- Abhängig von Fallzahl $n$ und Anzahl unabhängiger Variablen $p$
 
-
-
+\large
+$$\large R_{adj}^2 = R^2 - \frac{p \cdot (1 - R^2)}{n - p - 1} = 1 - (1 - R^2) \cdot \frac{n - 1}{n - p -1}$$
+\normalsize
 
 ## Multiple lineare Regression
 
