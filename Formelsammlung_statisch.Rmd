@@ -436,8 +436,19 @@ $$\large \hat{\alpha} =  \bar{y} - \hat{\beta}\bar{x}$$
 
 ## Determinationskoeffizient $R^2$
 
-- "Erklärungsleistung" eines Regressionsmodells: Anteil erklärter Varianz an Gesamtvarianz
-- Maß der Stärke eines Zusammenhangs
+- "Erklärungsleistung" eines Regressionsmodells: Anteil erklärter Varianz (an der abhängigen Variablen) an Gesamtvarianz
+- In einfacher (bivariater) linearer Regression: Quadrierter Pearson-Korrelationskoeffizient $r$
+
+\large
+$$\large R^2 =  \frac{erklärte \ Varianz}{Gesamtvarianz} = \frac{\sum_{i=1}^n (\hat{y_i} - \bar{y_i})^2}{\sum_{i=1}^n (y_i - \bar{y_i})^2}$$
+$$\large R^2 = 1 - \frac{unerklärte \ Varianz}{Gesamtvarianz} = 1 - \frac{\sum_{i=1}^n (y_i - \hat{y_i})^2}{\sum_{i=1}^n (y_i - \bar{y_i})^2} = 1 - \frac{\sum_{i=1}^n e_i^2}{\sum_{i=1}^n (y_i - \bar{y_i})^2}$$
+\normalsize
+
+### Adjustiertes (auch: korrigiertes) $R^2$ (Korrigierter Determinationskoeffizient)
+
+- 
+
+
 
 
 ## Multiple lineare Regression
